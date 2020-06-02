@@ -9,12 +9,13 @@
     &:last-child {
       border-bottom: none;
     }
-    .task__input {
-      
-    }
     .task__label {
       color: $secondary;
       width: 100%;
     }
   }
 }
+.task__label--done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  }

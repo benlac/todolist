@@ -3,18 +3,21 @@ import PropTypes from 'prop-types';
 
 import './form.scss';
 
-const Form = ({ value, newValue }) => {
-  const handleChange = (event) => {
-    newValue(event.target.value);
+const Form = ({ value, newValue, submitTask }) => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    submitTask();
   };
 
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleSubmit}>
       <input
         type="text"
         className="form__input"
         value={value}
-        onChange={handleChange}
+        onChange={(event) => {
+          newValue(event.target.value);
+        }}
       />
     </form>
   );
@@ -23,6 +26,7 @@ const Form = ({ value, newValue }) => {
 Form.propTypes = {
   value: PropTypes.string.isRequired,
   newValue: PropTypes.func.isRequired,
+  submitTask: PropTypes.func.isRequired,
 };
 
 export default Form;

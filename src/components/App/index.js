@@ -19,23 +19,55 @@ class App extends React.Component {
 
   state = {
     valueForm: '',
+    tasks: [],
   };
 
   changeValue = (newValue) => {
-    console.log(newValue);
     this.setState({
       valueForm: newValue,
     });
   }
 
+  submitTask = () => {
+    const { tasks, valueForm } = this.state;
+    this.setState({
+      // eslint-disable-next-line react/destructuring-assignment
+      tasks: [...tasks,
+        {
+          id: tasks.length,
+          content: valueForm,
+          done: false,
+        }],
+      valueForm: '',
+    });
+  }
+
+  updateTask = (id, newValue) => {
+    const { tasks } = this.state;
+
+    const taskUpdated = tasks.map((task) => {
+      if (task.id === id) {
+        return {
+          ...task,
+          done: newValue,
+        };
+      }
+      return task;
+    });
+
+    this.setState({
+      tasks: taskUpdated,
+    });
+  }
+
   render() {
-    const { valueForm } = this.state;
+    const { valueForm, tasks } = this.state;
     return (
       <div className="app">
         <Header />
         <div className="container">
-          <Form value={valueForm} newValue={this.changeValue} />
-          <Tasks />
+          <Form value={valueForm} newValue={this.changeValue} submitTask={this.submitTask} />
+          <Tasks tasks={tasks} setDone={this.updateTask} />
         </div>
         <Aside />
         <Counter />
