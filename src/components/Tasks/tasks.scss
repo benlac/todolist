@@ -1,0 +1,20 @@
+@import 'src/styles/_vars.scss';
+
+.tasks { 
+  .task {
+    width: 100%;
+    font-size: 1.4em;
+    padding: 1rem 0;
+    border-bottom: 1px solid $primary;
+    &:last-child {
+      border-bottom: none;
+    }
+    .task__input {
+      
+    }
+    .task__label {
+      color: $secondary;
+      width: 100%;
+    }
+  }
+}
