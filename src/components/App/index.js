@@ -62,6 +62,8 @@ class App extends React.Component {
 
   render() {
     const { valueForm, tasks } = this.state;
+
+    const taskInProgress = tasks.filter((task) => !task.done).length;
     return (
       <div className="app">
         <Header />
@@ -70,7 +72,7 @@ class App extends React.Component {
           <Tasks tasks={tasks} setDone={this.updateTask} />
         </div>
         <Aside />
-        <Counter />
+        <Counter numberTasks={taskInProgress} />
       </div>
     );
   }

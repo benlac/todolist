@@ -12,6 +12,7 @@ const Form = ({ value, newValue, submitTask }) => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <input
+        placeholder="Qu'avez vous à faire ?"
         type="text"
         className="form__input"
         value={value}
