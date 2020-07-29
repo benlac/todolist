@@ -1,5 +1,11 @@
 # Todolist desktop
-Todolist is a tool to manage your tasks
+
+A sample todolist made with ReactJS.
+You can manage your tasks with this todolist.
+Backend comming soon to persit tasks
+
+
+![alt text](https://github.com/benlac/todolist/blob/master/screen.png?raw=true)
 
 ## Installation
 
@@ -21,5 +27,3 @@ yarn start
 - React.js
 - Webpack and Babel
 - Sass
-
-Backend comming soon to persit tasks
