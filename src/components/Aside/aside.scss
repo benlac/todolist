@@ -1,6 +1,17 @@
+@import 'src/styles/_vars.scss';
+
+
 .aside {
   width: 60%;
   .aside__img {
     max-width: 100%;
+  }
+}
+
+
+@media #{$medium-down} {
+  .aside {
+    width: 100%;
+    margin-top: 2rem;
   }
 }

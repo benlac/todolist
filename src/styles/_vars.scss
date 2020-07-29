@@ -5,3 +5,12 @@ $secondary: #2C49B6;
 $third: #6791E4;
 $font: #0C163B;
 $fonttwo: #BF99AF;
+
+$xsmall: 375px;
+$xsmall-down: "only screen and (max-width: #{$xsmall})";
+
+$small: 480px;
+$small-down: "only screen and (max-width: #{$small})";
+
+$medium: 768px;
+$medium-down: "only screen and (max-width: #{$medium})";
