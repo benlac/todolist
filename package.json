@@ -1,6 +1,5 @@
 {
   "name": "react-modele",
-  "homepage": "https://benlac.github.io/todolist/",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
@@ -9,9 +8,7 @@
     "clean": "rm -rf dist",
     "clean:all": "rm -rf dist node_modules yarn.lock package-lock.json",
     "test": "mocha --require tests/.setup.js tests/**/*.test.js",
-    "test:watch": "mocha --watch --require tests/.setup.js tests/**/*.test.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test:watch": "mocha --watch --require tests/.setup.js tests/**/*.test.js"
   },
   "devDependencies": {
     "@babel/core": "*",
