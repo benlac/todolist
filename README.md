@@ -25,6 +25,6 @@ yarn start
 - Javascript
 - React.js
 - Webpack and Babel
-- Sass
+- Sass 
 
 © Benoit Lacombled - 2020
